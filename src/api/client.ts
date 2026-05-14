@@ -3,7 +3,7 @@ const BASE_URL = '/api';
 
 async function request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
   const response = await fetch(`${BASE_URL}${endpoint}`, {
-    credentials: 'include', // needed for express session to send/receive cookies
+    credentials: 'include', // needed for express session to send/receive cookies . Bach f any next request user ykoun mrouf b session dyalou
     ...options,
     headers: {
       'Content-Type': 'application/json',
